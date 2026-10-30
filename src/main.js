@@ -16,6 +16,9 @@ const telBtn = (cls, label) => `<a class="${cls}" href="tel:${esc(C.phone)}" dat
 // رسالة واتساب جاهزة لطلب خدمة محددة / Prefilled WhatsApp message requesting a specific service
 const waService = s => pick(s.waMessage) || T[lang].waService.replace('{service}', pick(s.title));
 const fmtDate = d => { const x = new Date(d); return isNaN(x) ? d : x.toLocaleDateString(lang === 'ar' ? 'ar-SY' : 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' }); };
+// رابط كامل للصورة: داخل متغير CSS يُحسب المسار النسبي من مجلد assets بعد البناء، فتختفي صور الواجهة على GitHub Pages
+// Full image URL: inside a CSS variable a relative path resolves against the built assets/ folder, which hid the hero images on GitHub Pages
+const absUrl = src => src ? new URL(src, document.baseURI).href : '';
 const arrow = () => `<span class="arr" aria-hidden="true">${lang === 'ar' ? '←' : '→'}</span>`;
 
 function render() {
@@ -49,7 +52,7 @@ function render() {
   </div></header>
   <main>
   <section id="home" class="hero" aria-roledescription="carousel" aria-label="${t.slides}">
-    ${slides.map((s, i) => `<div class="slide${i === 0 ? ' active' : ''}" style="--hero:url('${esc(s.image)}')" aria-roledescription="slide" aria-label="${t.slide} ${i + 1} / ${slides.length}"${i ? ' aria-hidden="true"' : ''}><div class="wrap">
+    ${slides.map((s, i) => `<div class="slide${i === 0 ? ' active' : ''}" style="--hero:url('${esc(absUrl(s.image))}')" aria-roledescription="slide" aria-label="${t.slide} ${i + 1} / ${slides.length}"${i ? ' aria-hidden="true"' : ''}><div class="wrap">
       <p class="eyebrow">${esc(name)}</p>
       ${i === 0 ? `<h1>${esc(pick(s.title) || pick(C.tagline))}</h1>` : `<h2 class="h1">${esc(pick(s.title))}</h2>`}
       <p>${esc(pick(s.text) || pick(C.intro))}</p>
