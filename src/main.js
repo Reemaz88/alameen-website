@@ -3,7 +3,9 @@ import C from './content.js';
 import T from './translations.js';
 
 let lang = 'ar';
-try { lang = localStorage.getItem('lang') || (navigator.language.startsWith('ar') ? 'ar' : 'en'); } catch {}
+// الزيارة الأولى بالعربية دائمًا، وبعدها تُحفظ اللغة التي يختارها الزائر
+// First visit always opens in Arabic; after that the visitor's chosen language is remembered
+try { lang = localStorage.getItem('lang') || 'ar'; } catch {}
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pick = v => (v && typeof v === 'object') ? (v[lang] || v.en || '') : (v || '');
