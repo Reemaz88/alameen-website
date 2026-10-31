@@ -54,7 +54,7 @@ function render() {
   </div></header>
   <main>
   <section id="home" class="hero" aria-roledescription="carousel" aria-label="${t.slides}">
-    ${slides.map((s, i) => `<div class="slide${i === 0 ? ' active' : ''}" style="--hero:url('${esc(absUrl(s.image))}')" aria-roledescription="slide" aria-label="${t.slide} ${i + 1} / ${slides.length}"${i ? ' aria-hidden="true"' : ''}><div class="wrap">
+    ${slides.map((s, i) => `<div class="slide${i === 0 ? ' active' : ''}${s.fit === 'banner' ? ' banner' : ''}" style="--hero:url('${esc(absUrl(s.image))}')" aria-roledescription="slide" aria-label="${t.slide} ${i + 1} / ${slides.length}"${i ? ' aria-hidden="true"' : ''}><div class="wrap">
       <p class="eyebrow">${esc(name)}</p>
       ${i === 0 ? `<h1>${esc(pick(s.title) || pick(C.tagline))}</h1>` : `<h2 class="h1">${esc(pick(s.title))}</h2>`}
       <p>${esc(pick(s.text) || pick(C.intro))}</p>

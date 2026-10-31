@@ -23,9 +23,9 @@ export default {
       title: { ar: "أكثر من 45 عامًا من الخبرة المحاسبية", en: "More than 45 years of accounting expertise" },
       text: { ar: "إشراف محاسبي، تقارير مالية دقيقة، واستشارات مالية وضريبية للشركات والمؤسسات والأفراد منذ عام 1981.", en: "Accounting supervision, accurate financial reports, and financial and tax advice for companies, institutions and individuals since 1981." },
       link: "#svc-accounting" },
-    { image: "images/pos-counter.jpg",
-      title: { ar: "برنامج الأمين وأنظمة نقاط البيع", en: "Al-Ameen software and point-of-sale systems" },
-      text: { ar: "موزّع برنامج الأمين للمحاسبة والمستودعات منذ 1997، مع أجهزة الكاشير والباركود وطابعات الفواتير مرتبطة في منظومة واحدة.", en: "Al-Ameen accounting and warehouse software partner since 1997, with cash registers, barcode scanners and receipt printers connected as one system." },
+    { image: "images/alameen-erp-soft.png", fit: "banner",
+      title: { ar: "برنامج الأمين ", en: "Al-Ameen software" },
+      text: { ar: "موزّع برنامج الأمين للمحاسبة والمستودعات منذ 1997.", en: "Al-Ameen accounting and warehouse software partner since 1997." },
       link: "#svc-software" },
     { image: "images/pos-handheld.jpg",
       title: { ar: "أجهزة وحلول تقنية متكاملة", en: "Complete hardware and technology solutions" },
@@ -107,14 +107,6 @@ export default {
         { ar: "أجهزة قراءة الباركود.", en: "Barcode scanners." },
         { ar: "طابعات الملصقات والباركود.", en: "Label and barcode printers." },
         { ar: "ملحقات وأنظمة نقاط البيع.", en: "POS accessories and systems." }
-      ] },
-    { id: "supplies", icon: "🏷", image: "images/pos-kit.jpg",
-      title: { ar: "مستلزمات الطباعة والباركود", en: "Printing & Barcode Supplies" },
-      text: { ar: "رولات فواتير وملصقات باركود ومستلزمات الطباعة والتغليف.", en: "Receipt rolls, barcode labels, and printing and packing supplies." },
-      items: [
-        { ar: "رول فواتير حرارية بمختلف المقاسات.", en: "Thermal receipt rolls in all sizes." },
-        { ar: "رول ملصقات لاصقة للباركود والأصناف.", en: "Adhesive label rolls for barcodes and items." },
-        { ar: "مستلزمات الطباعة والتغليف الخاصة بالمستودعات والمتاجر.", en: "Printing and packing supplies for warehouses and shops." }
       ] },
     { id: "tech", icon: "🖥", image: "images/pos-handheld.jpg",
       title: { ar: "الأجهزة والحلول التقنية", en: "Hardware & Technology Solutions" },

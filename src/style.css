@@ -183,3 +183,10 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:2.5rem;paddi
 .who strong{font-size:1.05rem}
 .who span{grid-row:2;color:#5a6577;font-size:.9rem;justify-self:start}
 .who em{grid-row:1/3;grid-column:2;font-style:normal;font-weight:600;color:var(--accent)}
+/* شريحة بصورة شعار (مثل شعار برنامج الأمين): تظهر الصورة كاملة على الجانب المقابل للنص بدل قصّها
+   Logo-banner slide (e.g. the Al-Ameen ERP banner): show the whole image beside the text instead of cropping it */
+.slide.banner{background:linear-gradient(90deg,rgba(7,28,61,.95) 0%,rgba(7,28,61,.75) 38%,rgba(7,28,61,0) 55%),var(--hero,none) right 2% center/60% auto no-repeat,radial-gradient(ellipse at 72% 50%,#0a9fb5 0%,#03657a 45%,#033a52 100%)}
+html[dir=rtl] .slide.banner{background:linear-gradient(270deg,rgba(7,28,61,.95) 0%,rgba(7,28,61,.75) 38%,rgba(7,28,61,0) 55%),var(--hero,none) left 2% center/60% auto no-repeat,radial-gradient(ellipse at 28% 50%,#0a9fb5 0%,#03657a 45%,#033a52 100%)}
+@media (max-width:700px){
+  .slide.banner,html[dir=rtl] .slide.banner{background:linear-gradient(180deg,rgba(7,28,61,.95) 0%,rgba(7,28,61,.8) 50%,rgba(7,28,61,0) 68%),var(--hero,none) center bottom 4rem/115% auto no-repeat,radial-gradient(ellipse at 50% 80%,#0a9fb5 0%,#03657a 45%,#033a52 100%)}
+}
