@@ -42,7 +42,7 @@ export default {
   },
   whatsapp: "963947412914", // بدون + أو أصفار / no + or leading zeros
   email: "ameen.hsoufi@gmail.com",
-  address: { ar: "اللاذقية، سوق التجار، عمارة باريس، محلات M1، الطابق الرابع", en: "Paris Building, M1 Shops, 4th Floor, Souq al-Tujjar, Lattakia, Syria" },
+  address: { ar: "اللاذقية، سوق التجار، عبارة باريس، محلات M1، الطابق الرابع", en: "Paris Passage, M1 Shops, 4th Floor, Souq al-Tujjar, Lattakia, Syria" },
   hours: { ar: "من السبت إلى الخميس", en: "Saturday to Thursday" }, // أيام الدوام / working days
   mapEmbed: "https://www.google.com/maps?q=35.516361,35.776444&z=16&output=embed",
   // روابط التواصل الاجتماعي أسفل الصفحة. "#" = رابط مؤقت. اترك الحقل فارغًا "" لإخفاء الأيقونة.
