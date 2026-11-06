@@ -134,6 +134,8 @@ footer .cols{display:grid;gap:2.5rem;grid-template-columns:1.4fr 1fr 1.2fr 1.2fr
 footer .flogo{height:64px;width:auto;max-width:100%;margin-bottom:1rem}
 footer .fname{color:#fff;font-size:1.05rem;display:block;margin-bottom:.5rem}
 footer p{font-size:.95rem}
+footer .agent{margin-top:1.25rem;display:grid;gap:.5rem;justify-items:start}
+footer .agent .btn{font-size:.9rem;padding:.6rem 1.1rem;color:#fff;text-decoration:none}
 footer h4{color:#fff;margin-bottom:.9rem;font-size:1rem}
 footer ul{list-style:none;padding:0;display:grid;gap:.45rem;font-size:.95rem}
 footer a{color:var(--blue-100);text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}

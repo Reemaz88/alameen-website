@@ -44,6 +44,14 @@ export default {
   email: "ameen.hsoufi@gmail.com",
   address: { ar: "اللاذقية، سوق التجار، عبارة باريس، محلات M1، الطابق الرابع", en: "Paris Passage, M1 Shops, 4th Floor, Souq al-Tujjar, Lattakia, Syria" },
   hours: { ar: "من السبت إلى الخميس", en: "Saturday to Thursday" }, // أيام الدوام / working days
+  // رابط صفحة وكلاء برنامج الأمين، يفتح الصفحة وينزل مباشرة إلى اسم المكتب (find = النص الذي يُبحث عنه في الصفحة)
+  // Link to the Al-Ameen agents page; it opens the page and scrolls straight to the office name (find = text to jump to)
+  agentPage: {
+    label: { ar: "مكتب المهندس ماهر محمد الصوفي", en: "Engineer Maher Mohammad Al-Soufi's Office" },
+    title: { ar: "وكيل برنامج الأمين", en: "Al-Ameen software agent" },
+    url: { ar: "https://alameensoft.com/%d9%88%d9%83%d9%84%d8%a7%d8%a1-%d8%b3%d9%88%d8%b1%d9%8a%d8%a7/", en: "https://alameensoft.com/en/agents-of-syria/" },
+    find: { ar: "مكتب المهندس ماهر محمد الصوفي", en: "Engineer Maher Mohammad" }
+  },
   mapEmbed: "https://www.google.com/maps?q=35.516361,35.776444&z=16&output=embed",
   // روابط التواصل الاجتماعي أسفل الصفحة. "#" = رابط مؤقت. اترك الحقل فارغًا "" لإخفاء الأيقونة.
   // Social links at the bottom of the page. "#" = placeholder link. Leave a field empty "" to hide its icon.

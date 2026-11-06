@@ -42,6 +42,8 @@ function render() {
   const telLinks = phones.map(p => { const who = pick(C.phoneNames?.[p]); return `${who ? `<span class="pname">${esc(who)}:</span> ` : ''}<a href="tel:${esc(p)}" dir="ltr">${esc(p)}</a>`; });
   const has = a => a && a.length;
   const featured = C.services.filter(s => s.featured);
+  // يفتح صفحة الوكلاء وينزل إلى اسم المكتب عبر Text Fragment (#:~:text=) / opens the agents page scrolled to the office name
+  const agentHref = C.agentPage ? pick(C.agentPage.url) + (pick(C.agentPage.find) ? '#:~:text=' + encodeURIComponent(pick(C.agentPage.find)).replace(/-/g, '%2D') : '') : '';
   const links = [['home', t.home], ['services', t.services], ['about', t.about], ...(has(C.clients) || has(C.testimonials) ? [['clients', t.navClients]] : []), ...(has(C.news) ? [['news', t.navNews]] : []), ['contact', t.contact]];
   const slides = has(C.heroSlides) ? C.heroSlides : [{ image: C.heroImage }];
   const navLinks = links.map(([id, label]) => `<a href="#${id}">${label}</a>`).join('');
@@ -117,7 +119,7 @@ function render() {
     </form></div></div></section>
   </main>
   <footer><div class="wrap cols">
-    <div>${C.logoOnDark ? `<img class="flogo" src="${esc(pick(C.logoOnDark))}" alt="${esc(name)}" loading="lazy">` : `<strong class="fname">${esc(name)}</strong>`}<p>${esc(pick(C.intro))}</p></div>
+    <div>${C.logoOnDark ? `<img class="flogo" src="${esc(pick(C.logoOnDark))}" alt="${esc(name)}" loading="lazy">` : `<strong class="fname">${esc(name)}</strong>`}<p>${esc(pick(C.intro))}</p>${agentHref ? `<div class="agent"><span class="flabel">${esc(pick(C.agentPage.title))}</span><a class="btn outline" href="${esc(agentHref)}" target="_blank" rel="noopener">${esc(pick(C.agentPage.label))}</a></div>` : ''}</div>
     <div><h4>${t.quickLinks}</h4><ul>${links.map(([id, label]) => `<li><a href="#${id}">${label}</a></li>`).join('')}</ul></div>
     <div><h4>${t.services}</h4><ul>${C.services.map(s => `<li><a href="#svc-${esc(s.id)}">${esc(pick(s.title))}</a></li>`).join('')}</ul></div>
     <div><h4>${t.reachUs}</h4><ul>
